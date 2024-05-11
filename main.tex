@@ -1,14 +1,26 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage{graphicx} % Required for inserting images
-\usepackage{amsmath,cite,times,enumerate,enumitem}
+\usepackage{amsmath,times,enumerate,enumitem}
 \usepackage[utf8]{inputenc}
 \usepackage{amsfonts}
 \usepackage{amssymb,pdfpages}
 \usepackage{makeidx}
 \usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage{ragged2e}[justify]
+\usepackage{blindtext}
+\usepackage{biblatex}
+\addbibresource{mybib.bib}
+\usepackage{listings}
+\graphicspath{images/}
+\usepackage{tfrupee}
+\usepackage{textcomp}
+\usepackage{blindtext}
+
+\usepackage{subfiles}
 \begin{document}
 
-\title{Cognitive skills, personality, and economic preferences in collegiate success}
+\title{Unveiling the Nexus: Cognitive Skills, Personality Traits, and Economic Preferences in Collegiate Achievement}
 \maketitle
 \setcounter{page}{0}
 
@@ -16,114 +28,107 @@
 
 \vspace*{\fill}
 
-{\author{Anindya Singh \\ \large Shiv Nadar Institute of eminence}}
+{\author{Anindya Singh \\ \large Shiv Nadar Institute of eminence}\\
+\date{\today}
 
 \vspace{1cm}
 
-{\date{April 2024}}
+
 
 \vspace*{\fill}
-
+\newpage
+\tableofcontents
 \newpage
 \begin{abstract}
-    We collected multiple measures from 100 students at a small public undergraduate liberal
-arts college in the Midwestern US and later assessed their academic success. The “proactive” (hard-working, persistent) aspect of the Big Five trait of Conscientiousness and not its
-“inhibitive” (organized, careful) aspect is a large positive predictor for two graduation outcomes and grade point average (GPA). The Big Five trait of Agreeableness (“pro-sociality”)
-is a large and negative predictor for graduation outcomes. A non-standard cognitive skill
-measure (a backward-induction game) positively predicts graduation outcomes, in parallel
-with its success in predicting vocational student job success (Burks et al., 2009). Patient
-time preferences predict one graduation outcome and GPA
+
+    We are trying to build an experiment that includes collecting measures from 100 students from a multidisciplinary college and later assess their academic success. We essentially want to look at trait of conscientiousness(proactive) and agreeableness(pro-social) being positive and negative predictor of graduation outcomes respectively. The traits in consideration include hard-working, persistent, organised, careful, trust, altruism, kindness, affection, and other prosocial behaviors.
+
 \end{abstract}
 \newpage
 \section{Introduction}
-The formal education system plays a crucial role in modern societies as it serves as the primary means of investing in human capital. Nowadays, many occupations require individuals to have post-secondary education in order to succeed. According to conventional economic analysis, it is rational for individuals to only pursue an educational program if they have already assessed that the benefits outweigh the costs and if they are committed to completing their studies. However, there has been a growing concern regarding the high dropout rates from post-secondary educational programs in the United States. Various studies have highlighted this issue, indicating that the average retention rate across all higher education institutions is approximately 75\%, and the average graduation rate for a four-year degree within four years ranges from 35\% to 50\%. Additionally, a significant portion of students who begin a four-year degree fail to complete it. These statistics demonstrate that there are disparities in outcomes based on students' socioeconomic backgrounds. The failure to complete a degree not only impacts a student's economic prospects but also often leaves them burdened with significant debt. Given this empirical context, economists have expanded their perspective on collegiate success beyond simple models of rational choice. They now consider individual characteristics that can predict student success.\cite{article2}
+\justifying The formal education system plays a crucial role in modern societies as it serves as the primary means of investing in human capital. Nowadays, most occupations require individuals to have post-secondary(high-school) education in order to hire or to give them employment. According to conventional economic analysis, a rational individual would pursue an educational/academic program only if they have already assessed that the return/benefit outweighs the cost of pursuing a program. However, there has been a rising concern about dropout rates from higher secondary and even graduation-level academic programs in India. \cite{article} The concerns have made people extensively research the Govt. policies to make people pursue higher education as stated in Dr. Gitanjali Sen's work on the Kanyashree program flown by the West Bengal Govt. \cite{unknown} Also the students pursuing a four-year degree program fail to complete it. These statements are backed by recent research demonstrating that there are disparities in outcomes based on students' socioeconomic backgrounds. \cite{Gitanjali} \cite{article2}
 
-In this research paper, we will analyze three different measures of college success within a sample of 100 students from the University of Minnesota, Morris (UMM), a four-year US college. Taking a broader perspective from the field of behavioral economics, we collected data in the spring of 2007 as part of a larger project. The data included information on cognitive skills such as non-verbal IQ, numeracy, and a measure of planning ability called "Hit15." Additionally, we gathered data on personality traits using the Big Five model, demographics, and economic preferences related to time and risk.
+Hereafter, given the context/empirical context, some researches are made using models that are beyond the models of rational choice, they consider individual characteristics that can predict the success of the students.
 
-To further investigate the success of these students, we conducted a follow-up study in 2013. During this phase, we assessed three indicators of success: the final cumulative grade point average (GPA), whether students graduated within the standard four-year timeframe, and whether they graduated within six years, which serves as an alternative evaluation criterion for institutional success. We also considered cases where students did not graduate at all during the observation period.
+In this research paper, we will analyze three different measures of college
+success within a sample of 100 students from the University, a four-year college. Taking a broader perspective from behavioral economics, we will collect data in the spring of the past academic year as part of a larger project. The data included information on cognitive skills such as non-verbal IQ, numeracy, and a measure of planning ability. Additionally, we will gather data on personality traits using the Big Five model, demographics, and economic preferences related to time and risk.
 
-While previous research has primarily focused on predicting grades, our main emphasis is on graduation outcomes. This is because there is a limited amount of existing work that specifically examines these important outcomes among college students.
+To further investigate the success of these students, we will conduct a follow-up study in later years. During this phase, we will assess the three indicators of success: the final cumulative grade point average (GPA), whether students graduated within the standard four-year time-frame, and whether they graduated within six years, which serves as an alternative evaluation criterion for institutional success. We will also consider cases where students did not graduate at all during the observation period.
 
-In accordance with previous research in psychology (Chamorro-Premuzic and Furnham, 2003, 2008; Komarraju et al., 2009; Noftle and Robins, 2007; O'Connor and Paunonen, 2007), we find that the personality trait of Conscientiousness is a strong predictor of final cumulative GPA. However, as discussed in Section 3.1, this trait can be divided into two distinct "aspects": a "proactive" aspect characterized by hard work and persistence, and an "inhibitive" aspect characterized by organization and carefulness (Costa et al., 1991; DeYoung et al., 2007; Jackson et al., 1996; Roberts et al., 2005). Interestingly, our study reveals a new finding: it is only the proactive aspect of Conscientiousness that influences this relationship.
+While previous research has primarily focused on predicting grades, our main emphasis will be on graduation outcomes as in \cite{Calinescu}. This is because there is a limited amount of existing work that specifically examines these important outcomes among college students.
 
-When considering each cognitive skill measure individually in a multivariate model, all of them show varying degrees of predictive power for GPA. However, when all variables are included in the model, no cognitive skill measure remains statistically significant in predicting GPA. Furthermore, our economic measures of time preferences, specifically a lower present bias and lower intensity of long-term discounting within a quasi-hyperbolic discounting framework, also predict GPA. This finding aligns with the existing research conducted by behavioral economists on time preferences (Dohmen et al., 2011; Golsteyn et al., 2014).
+When considering each cognitive skill measure individually in a multivariate model, all of them will show varying degrees of predictive power for GPA. However, when all variables are included in the model, either cognitive skill measure will remains statistically significant in predicting GPA or not. We will see if this finding aligns with the existing research conducted by behavioral economists on time preferences
 
-In terms of graduation outcomes, after adjusting for demographic variables, similar to GPA, it is evident that Conscientiousness is strongly linked to both graduation indicators. However, our findings also reveal a unique result in relation to GPA: only the "proactive" aspect, not the "inhibitive" one, influences the association with these outcomes. Moreover, in our study, this factor demonstrates a significant predictive impact (a one-standard-deviation increase is linked to a 3-fold to 7-fold rise in graduation odds.) Conversely, the personality trait Agreeableness (also discussed in Section 3.1, and essentially a measure of what experimental economists refer to as "pro-sociality") is inversely correlated with graduation outcomes. While our traditional cognitive skill assessments, IQ and numeracy, align with expectations when analyzed individually in a multivariate model, they do not hold significance in the complete model. Additionally, we observe that one of our economic indicators of time preferences (greater long-term patience) is positively associated with timely completion, but does not impact completion within six years (i.e., during the observation period).
-
-1. The outcomes of our unique cognitive skill assessment, known as the backward induction task ("Hit15"), are quite remarkable. This task involves participants thinking in reverse from a basic numerical objective to determine the most optimal current action when engaging in a game against a computer (further elaborated in Section 4.1). We view this task as a way to gauge planning or self-organizational capabilities (Gneezy et al., 2010). Our findings indicate that this planning assessment contributes slightly to predicting timely graduation, and significantly to predicting graduation within six years (i.e. during the observation period), surpassing the predictive abilities of personality traits and our more traditional cognitive skill assessments. In fact, when comparing standardized effect sizes in regressions that include both variables, our planning assessment demonstrates a greater impact than non-verbal IQ and is more statistically significant in predicting either graduation outcome.
-
-The discovery made on Hit15 aligns with a previous one involving a large group of adult students enrolled in a vocational training program (trainee truckers). Data was gathered using the same protocol, and these students were monitored during their employment to identify factors that influenced the successful completion of a year of service, resulting in the vocational training being free under a training contract (Hoffman and Burks, 2014). In that particular scenario, the metric also proved to be valuable in predicting the completion of training contracts, and it was interpreted as the ability to strategically plan future actions based on current circumstances and limitations (Burks et al., 2009, p. 7748). If we apply a similar interpretation to our student participants, it is possible that Hit15 measures a specific cognitive skill related to self-management that is not adequately assessed by conventional tools. Considering the established psychological evidence highlighting the significance of self-management in academic achievement (e.g. Robbins et al., 2006), it may warrant increased attention from both educational institutions and the scientific community.
-
-The paper is structured as follows. First, we describe the location of the host institution for the study, UMM, in the higher
-education industry in the US, in order to locate our subjects in the larger reference pool of US university students. Second,
-we review some highlights of the relevant literature that report findings on the relationship between subject characteristics
-we measure and student success. Third, we discuss the design of the data collection. Fourth, we provide a short descriptive
-overview of the characteristics of the subjects, grouped by graduation success categories, and display the correlations among
-our measures. Fifth, we report the results of a series of logit and Tobit regression models that explore the predictive power
-of our measures for student success when we control for more than one characteristic. The final section summarizes our
-results and discusses their limitations and their implications.
 
 \section{Samples}
+A lot of work has been done by experimental economists and psychologists which are based on the colleges they teach in or in other words the investigators of the experiment teach or are enrolled in.\\
+Gladly, while working on an analysis of college student success the college or university students are the best population to take out representative sample.\\
+The task although will be to find a large and diverse higher education system in India such as and preferably IITs, NITs, even we should be taking into consideration the Armed Forces and other Govt. initiated institutions.\\
+The institutions may vary in the degrees that they offer and the level of competitive exams that are thrown at students in the selection process.
+\section{Literature Review}
+A vast multitude of factors, inclusive of individual variations in personality and cognitive biases as stated by Anderson 2011 \cite{anderson}, come into play in the complicated economic decision-making process. According to conventional economic theory, rationality and utility maximization are often the central factors guiding decision-making. Nonetheless, new research has proposed that personality traits are crucial determinants of various economic choices or results. This literature review aims at investigating how classical decision theory and personality theory can be integrated together to have a better understanding regarding economic decision-making processes. The suggested framework is intended for addressing the disparity between classical decision theory comprising elements like risk perceptions and time preferences; on one side and Big Five personality theory that consists of five broad dimensions: open-mindedness, responsibility, sociability or extroversion (extraversion) versus introversion), kindheartedness (agreeableness) as well as anxiousness for instance neuroticism on the other side. Through studying correlation structure between economic preferences and personality traits, researchers will be able to explain what drives economic choices.\\
+The link between character qualities and scholastic success has been an ongoing issue in education research also by Corazzini 2021 \cite{corazzini2021}. However, it is yet to be settled exactly how one can relate these major areas of life. This variability could be as a result of diverse methods during studies like the sample group employed, number of people used or strategies applied. This survey concentrates on the literature concerning Big Five personality traits and their influence on academic attainment by utilizing a unique data set obtained from Italian students who were studying for their first degree.\\
+Based on this theory, five core dimensions that form human personality are identified to include: openness, conscientiousness, extraversion, agreeableness and neuroticism. Personality variables for the students were determined from information collected before commencement of school year. The objective was to establish whether causal links existed between personal traits and grade point average (GPA) in the first year at campus as suggested by research literature based on these measurements with intelligence factors being controlled for.\\
+Non-intellectual capabilities are critical in several areas of academia, such as labor economics, education and behavioral economics. Nonetheless, the way these skills are measured as well as their interpretation are quite disparate across literature which makes comparison and synthesis of findings difficult. The aim of this paper is to systematically explore various approaches to measuring non-cognitive skills within an integrated dataset in order to establish their predictive ability for educational achievement and their constituents as done by Humphries 2017 \cite{humphries2017interpretation}.\\
+The study also shows that how non-cognitive factor is constructed impacts measured outcomes as well as conclusions about the importance of these type of skills. It also illustrates that factors assembled from self-reporting activity may have prediction capability similar to robust taxonomies like Big Five Factors. The research dissects non-cognitive dimensions into personality traits and economic preferences underlying them, making it possible for analysis of the multifaceted character of such skills.\\
+It is important for education policymakers and practitioners to have an understanding of the determinants of school success. For a long time, cognitive abilities have been identified as significant predictors of academic achievement but non-cognitive abilities are still under scrutiny, this has been directed into light by Horn 2018 \cite{horn2018preferences}. The objective of this exploratory study is to clarify how cognitive abilities, preferences and the outcomes in academics relate to one another among students at universities.\\
+The research revealed several interesting results about the impact of non-cognitive issues on academic performance. In particular, patience and present bias, two indicators for measuring time preference exhibited other than straight line relationship with academic outcome. Competitiveness has been found to be a significant predictor of GPA where students choosing more competitive payment schemes having higher average GPAs. Furthermore, risk aversion shows a positive association with exam marks especially when it comes to multiple choice questions. This was followed by cooperative preferences measured by contributions made in a public good game that were also found to be positively nonlinearly related on GPA with student who contributed around half their possible amounts performing better academically.\\
+\break
 
-Much work by experimental economists and psychologists is based upon subjects drawn from the ranks of students at the colleges at which the investigators teach. This naturally raises the question of the generalizability of the findings to subject pools that are culturally, socially, or demographically different. This issue has been recently addressed by Henrich et al. (2010), who point out that the degree of concern depends on the topic of the empirical investigation. Happily, in an
-analysis of college student success college students are exactly the right population. However, in order to later assess the generalizability of our findings we must still locate our subjects in a large and diverse higher education system in the US.
-UMM is located on the prairie in west central Minnesota, with an enrollment of 1900 students, and a curricular design
-similar to that of many private liberal arts colleges.4 Given the broadly-based character of the US higher educational system,
-institutions vary in the degrees offered and their level of student selectivity, and this is true of publicly-funded institutions
-such as the University of Minnesota, Morris as well as privately operated colleges and universities. The Carnegie Foundation
-for theAdvancement of Teaching provides a widely-used classification systemfor US institutions of higher education that was
-last updated in 2010.According to this system, UMM is classified as follows: arts and science focus, exclusively undergraduate
-offering a Baccalaureate degree, full-time four-year, more selective, lower transfer-in, small, and highly residential (Carnegie
-Foundation for the Advancement of Teaching, 2010). 
+The following paper is structured as follows.\\
+First we describe the location i.e. the institutions we are aiming to focus on as stated earlier, we are looking at the large and diverse universities for our experiment such as IITs, NITs etc. also to note, that we don't just focus on STEM oriented institutions but also that comprises of Liberal Arts etc.\\
+Second, we review some highlights of the relevant literature. In the literature review we try and state some of the important relationships that are found by using similar sample and subjects with varying experimental settings.\\
+Third, we then as far as our hypothesis goes we try predict the tests that are taken by using the Multidimensional Personality Questionaire. We also state the functions and qualities of a good and effective questionnaire that is relevant to our hypothesis and experiment design.\\
+Fourth, we provide a descriptive presumably a brief of the characteristics of the predicted subjects through the design.\\
+Fifth, we try and discuss the design and data collection.\\
+Sixth is the hypothesised results that are expected through this behavioral economical experiment. Trying to explain and state the correlation of personality, cognitive, psychoanalytical aspects effecting the collegiate success of the subjected students.\\ The final section summarises the expected results and discusses the limitations that may occur during the experiment and analysis.
 
 \section{Design and data collection}
 
-During the spring semester of 2007 the participants took part in a series of eleven tasks that took two two-hour blocks
-of time, separated by a short break. Subjects participated in a computer laboratory at UMM with dividers between the
-computers, and interacted in groups of 25–35 at a time. The eight tasks providing measures in the present paper are:
-(1) Personality profile.
-(2) Incentivized risk aversion experiment.
-(3) Demographic profile.
-(4) Incentivized time preferences experiment.
-(5) Incentivized non-verbal IQ test.
-(6) Incentivized numeracy (quantitative literacy) test.
-(7) Incentivized Hit 15 Points “backward induction” game against the computer.
-(8) Survey on impatience, cooperation, etc.
-More detailed descriptions of each task as well as the additional tasks completed by the subjects, are provided by Burks
-et al. (2008). Here we cover a few points relevant to the present paper.
-The personality instrument used was the Multidimensional Personality Questionnaire (MPQ) (Patrick et al., 2002), a
-standard tool created at the University of Minnesota in 1982. The MPQ has eleven differing scales measuring primary trait dimensions. Because work in economic psychology has moved rather clearly toward a focus on the Big Five as a common
-psychometric model for personality in the period since our intake data was collected (Almlund et al., 2011; Borghans et al.,
-2008), we have recast our MPQ results into measurements of the Big Five personality traits, using what is known about
-the mapping of MPQ scales into Big Five aspects and facets, with some assistance from questions in our impatience and
-cooperation survey, following Rustichini et al. (2012). The mapping from MPQ to Big Five allows us to separate the
-“proactive,” industrious, achievement-oriented aspect of Conscientiousness from the “inhibitive,” cautious, careful, and
-orderly aspect, as described above in Section 3.1.
-Although we have no questionnaire measure of Intellect which would be directly comparable in the format of the measurement tool to the other Big Five traits, we do have three tests measuring cognitive skills: non-verbal IQ, numeracy, and
-the backward induction/planning measure, Hit15, all of which were incentivized. Non-verbal IQ was collected using a computerized adaptation of Raven’s Standard Progressive Matrices (Raven et al., 2004), an abstract reasoning task.6 Our measure
-of numeracy is one half of the two-section adult test of quantitative literacy published by the Educational Testing Service
-(ETS, 2014), and is designed to measure how well one can use numbers found in ads, forms, flyers, articles or other printed
-materials, including being able to do appropriate arithmetic operations on the material to infer desired information (Burks
-et al., 2009).7
-Finally, Hit15 is a game played against the computer, once for training, and then four times for a small monetary prize; it
-was developed by the investigators of Gneezy et al. (2010).
-8 The goal is to be the first to add the 15th point to the points total
-for the game, when each player on each turn must add 1, 2, or 3 points (adding 0 points is not permitted), and with the points
-total starting out at a different level for each game. The subject and the computer take turns as to who goes first, and for
-the first game the computer has the first move, and exercises a dominant strategy to win. This allows the subject to observe
-the correct strategy, which has to be applied under somewhat varying circumstances (due to the alternation of turns and
-changing starting points totals) to win the four games with cash payoffs. This arguably captures not just the willingness to
-think ahead in the sense of setting goals, but specifically being able to reason backwards from an established goal to select
-the action that is now is best to reach the goal (Gneezy et al., 2010).
-We also used incentivized experiments to construct standard measures of two types of economic preferences, those for payments over time, and those for payments under uncertainty. For payments over time we offered four panels of seven questions, each offering a larger future payment versus a smaller and nearer one that decremented in \$5 jumps (e.g. \$80 in two days versus \$75 today). Two panels offered choices between today and a later time, while two offered choices between two days off and a later time. We used this instrument to construct estimates of the quasi-hyperbolic discount rates (Laibson, 1997) for each subject, estimating ˇ (Beta), the present-bias parameter, or the discount factor for now versus later, and ı (Delta), the exponential discount factor for a future date versus a later future date (following Burks et al. (2009, 2012) for vocational student subjects). For choices under uncertainty we offered four panels of six questions, each offering a choice between a dollar payment that incremented and a 50–50\% lottery that was kept constant (e.g. get \$2 for sure or take a 50–50 gamble with \$2 and \$10 payoffs); with small monetary gambles such as this,
-risk neutrality is a reasonable benchmark for rational behavior. We used two of these panels (ones with all choices in the positive domain) to estimate a standard risk aversion parameter (Sigma), with risk aversion increasing in the value
-of \[\sigma\]. 
+The experiment is supposed to be designed in a way that there will be a series of tasks/tests that will be taken in few hour blocks by 30-40 students at a time as done by Burks et al \cite{BURKS}.\\
+The test in consideration is the Multidimensional Personality Questionnaire (MPQ).\\
+The eight tasks provided in Multidimensional Personality Questionnaire (MPQ) are as follows:
+(1) Personality profile.\\
+(2) Incentivized risk aversion experiment.\\
+(3) Demographic profile.\\
+(4) Incentivized time preferences experiment.\\
+(5) Incentivized non-verbal IQ test.\\
+(6) Incentivized numeracy (quantitative literacy) test.\\
+(7) Incentivized Hit 15 Points “backward induction” game against the computer.\\
+(8) Survey on impatience, cooperation, etc.\\
+The personality test that has been used is the Multidimensional Personality Questionnaire (MPQ) as mentioned above, this is used by Patric et al in 2002 \cite{patrick}. 
+Since when we will collect our data, the new fad in economic psychology is to use Big Five Personality Model as standard for assessing personality. For this reason, we will need to convert the results of MPQ (Multidimensional Personality Questionnaire) which measures eleven multiple primary trait dimensions scales into measurements of the big five traits. To do this, we will borrow from what has been known on how these scales map onto aspects and facets of Big Five and also draw ideas from questions in our impatience and cooperation survey following Rustichini et al.’s (2012) approach. This way, it becomes possible to tell apart different facets of Conscientiousness like proactive achievement oriented aspect versus inhibitive cautious one (Rustichini et al., 2012) \cite{rustichini2016toward}.\\
+Despite lack of a questionnaire specifically evaluating Intellect as directly comparable to other Big Five traits, we have three examinations for cognitive skills: non-verbal IQ, numeracy and backward induction/planning measure known as Hit15 which were given incentives. Non-verbal IQ was assessed using the computerized version of Raven’s Standard Progressive matrices (Raven et al., 2004)\cite{raven1998raven} which focus on abstract reasoning power. For numeracy, our measure stems from one section in two-section adult test of quantitative literacy by Educational Testing Service (ETS, 2014). The instrument appraises one's capacity to understand and manipulate numerical information that may be found in various written materials such as advertisements, forms and articles to extract desired information (Burks et al., 2009)\cite{burks2009cognitive}.\\
+Finally, Hit15 is a computer game played twice: first for practice and then four times with small monetary compensations. This game was developed by researchers using the methodology specified in Gneezy et al. (2010)\cite{gneezy2010experience}. The objective is to achieve a total of 15 points before the opponent does, whereby each player inserts either 1, 2, or 3 points during his/her turn (no zero points allowed). Different initial totals are used for each round and players take turns deciding to go first. In the first round, the computer plays with a dominant strategy to win which allows a player to observe the right approach. It motivates players to use strategic thinking and reason backwards so as to win next rounds while adapting their methods towards different situations. Indeed, this section of the game aims at examining not only how willing one is to plan ahead but rather whether he/she can reason backward from an objective goal in order to decide what action will be best now (Gneezy et al., 2010).
 
-\section{References}
-\bibliographystyle{plain}
-\bibliography{mybib}
+We will also employ incentivized experiments to establish standard measures for two types of economic preferences: This first involves payments over time and the second regarding payments under uncertainty For those involving payment over time, this will be divided into four sets comprising of seven questions each which entails a larger amount in future than an immediate smaller one with decrements of multiples of five (e.g. \rupee80 in two days versus \rupee75 today). Two pairs will involve decisions between present and future while the others shall involve choices between two different upcoming events and a later option. This instrument will allow us to calculate the correlation between the above preferences in monetary term with the data on personality traits that is gathered by using the Multidimensional Personality Questionnaire these are then used to calculate rates of time preference. It consists of four groups each having six questions, where one has a choice between a constant rupee payment that rises and another that is just an even bet with equal odds (for example take certain \rupee2 or take gamble at 50–50\% where payoffs are \rupee2 and \rupee10), low stakes bets like this.\\
+\newpage 
+\section{Questionnaire and MPQ}
+as
+\newpage
+asdas
+\newpage
+asda
+\newpage
+asas
+\newpage
+sadas
+\newpage
+\section{Discussion and conclusions}
+To predict student outcomes of our undergraduates from the University, we will test for the predictive power of certain personality characteristics, cognitive skills and economic preferences with demographic controls on three measures: graduation within six years or less; graduation within four years or less; and final cumulative GPA.\\
 
+However, this study has some specific limitations. First, is about sample size which is small hence making it difficult to detect statistical significance and also to allow exploring more complex model specifications without overfitting. The college is mainly made up of students who go to a small public liberal arts college. While they are similar to other students at small academically selective liberal arts colleges, it should be noted that a lower price tag on attendance at a public institution leads more first generation in college students compared to private liberal arts schools. Consequently, one needs to be cautious when extending the knowledge gained from this research group.\\
 
+Besides, our data collection tools were developed as part of wider research aimed primarily at conducting field work among a large population of vocational education students and therefore might have some context-specific limitations.\\
+
+There are two personality indicators that exhibit significant predictive ability, one of which is Conscientiousness. A component of the Big Five traits, it can be bifurcated into two different components: "proactive" which includes traits like hard work and persistence, and "inhibitive" which include traits like orderliness and organization. An interesting point to note from our study is that only the proactive aspect of Conscientiousness among our participants are expected to demonstrate a strong association with both graduation success and cumulative GPA— whereas the inhibitive aspect are not expected to show any predictive power in our analysis.\\
+
+Now, turning to cognitive skills, we are expected to find that one non-standard measure, the Hit15 incentivized backward induction game (Burks et al., 2008; Gneezy et al., 2010) \cite{BURKS,gneezy2010experience}, appears to offer some incremental predictive power above nonverbal IQ and numeracy. It is the only cognitive skill measure that we are looking forward to see a retain in statistical significance in our full model for both graduation outcomes (though it does not predict GPA), and its estimated predictive effect with regard to graduation is large.
+
+\newpage
+\printbibliography
+
+\newpage
 
 
 \end{document}
